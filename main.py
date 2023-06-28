@@ -1,3 +1,4 @@
+from db.setup import DatabaseSetup
 from gmail_api.gmail_auth import GmailAuth
 from gmail_api.gmail_fetch import GmailFetchEmail
 
@@ -9,6 +10,7 @@ if __name__ == "__main__":
     fetched_emails = GmailFetchEmail(auth.service).fetch_emails()
 
     # Store fetched emails in the database
+    db = DatabaseSetup()
 
     # Load rules from JSON file
 
