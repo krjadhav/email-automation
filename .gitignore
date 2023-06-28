@@ -1,0 +1,27 @@
+# Ignore Python virtual environment folders
+venv/
+env/
+
+# Ignore database files
+*.db
+
+# Ignore log files
+*.log
+
+# Ignore sensitive or local configuration files
+config.ini
+secrets.txt
+.env
+
+# Ignore generated files
+generated/
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+
+# Ignore secrets folder
+secrets/
+
+# Ignore macOS .DS_Store files
+.DS_Store
