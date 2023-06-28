@@ -3,6 +3,7 @@ from db.setup import DatabaseSetup
 from gmail_api.gmail_auth import GmailAuth
 from gmail_api.gmail_fetch import GmailFetchEmail
 from services.load_rules import load_rules
+from services.process_emails import process_emails
 
 
 if __name__ == "__main__":
@@ -20,3 +21,4 @@ if __name__ == "__main__":
     rules = load_rules("rules.json")
 
     # Process emails based on rules
+    process_emails(auth.service, db.session, rules)
