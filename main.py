@@ -1,3 +1,4 @@
+from db.crud import bulk_create_emails
 from db.setup import DatabaseSetup
 from gmail_api.gmail_auth import GmailAuth
 from gmail_api.gmail_fetch import GmailFetchEmail
@@ -11,6 +12,7 @@ if __name__ == "__main__":
 
     # Store fetched emails in the database
     db = DatabaseSetup()
+    bulk_create_emails(db.session, fetched_emails)
 
     # Load rules from JSON file
 
