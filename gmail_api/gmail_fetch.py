@@ -17,7 +17,7 @@ class GmailFetchEmail:
         if not emails:
             raise Exception("No emails found!")
 
-        for email in emails[:10]:
+        for email in emails:
             # Fetch individual email details
             email_data = (
                 self.service.users()
